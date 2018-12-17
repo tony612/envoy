@@ -9,6 +9,8 @@ services:
       - ./config/s2s-python-envoy.yaml:/etc/s2s-python-envoy.yaml
     expose:
       - "9001"
+    ports:
+    - "9901:9901"
 
   grpc:
     build:
@@ -18,3 +20,5 @@ services:
       - ./config/s2s-grpc-envoy.yaml:/etc/s2s-grpc-envoy.yaml
     expose:
       - "9211"
+    ports:
+    - "19901:9901"
