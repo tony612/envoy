@@ -9,4 +9,4 @@ export GOARCH=amd64
 export CGO_ENABLED=0
 
 go build -o ./bin/service ./service
-
+go build -o ./bin/go-client ./service/client

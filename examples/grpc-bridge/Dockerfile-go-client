@@ -1,0 +1,6 @@
+FROM envoyproxy/envoy:latest
+
+COPY ./bin/go-client /client/go-client
+
+RUN mkdir /var/log/envoy/
+CMD /usr/local/bin/envoy -c /etc/s2s-python-envoy.yaml
